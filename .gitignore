@@ -16,3 +16,14 @@ results/
 *.vcf
 data/Useful_files/*.vcf.gz
 data/Useful_files/*.vcf
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# Large result files
+results/*.bam
+results/*.vcf
+logs/*.log
