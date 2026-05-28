@@ -10,3 +10,9 @@ work/
 results/
 .nextflow*
 
+
+# Large data files (GitHub limit 100MB)
+*.vcf.gz
+*.vcf
+data/Useful_files/*.vcf.gz
+data/Useful_files/*.vcf
