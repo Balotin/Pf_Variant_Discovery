@@ -1,29 +1,40 @@
-data/
+# Ignore ONLY the large VCF files, but track everything else in data/
+# The exclamation mark (!) means "do not ignore"
+
+# First, ignore the large VCF files
+data/Useful_files/KnownSites_Pf3D7_AllChr_v3_PASS_only.pf7.vcf.gz
+data/Useful_files/KnownSites_Pf3D7_AllChr_v3_PASS_only.pf7.vcf.gz.csi
+data/Useful_files/KnownSites_Pf3D7_AllChr_v3_PASS_only.pf7.vcf.gz.tbi
+*.vcf
+
+# Ignore binary alignment files
 *.bam
 *.bai
+*.sam
+
+# Ignore compressed FASTQ files
 *.fastq.gz
-*.tbi
-data/
-Useful_files/
-.KnownSites_Pf3D7_AllChr_v3_PASS_only.pf7.*
+
+# Ignore pipeline work directories
 work/
 results/
 .nextflow*
+logs/
 
-
-# Large data files (GitHub limit 100MB)
-*.vcf.gz
-*.vcf
-data/Useful_files/*.vcf.gz
-data/Useful_files/*.vcf
-
-# Temporary files
+# Ignore temporary files
 *.tmp
 *.temp
 *.swp
 *.swo
 
-# Large result files
-results/*.bam
-results/*.vcf
-logs/*.log
+# Track everything else in data/ (by NOT ignoring it)
+!data/**/*.bed
+!data/**/*.list
+!data/**/*.txt
+!data/**/*.gff
+!data/**/*.fasta
+!data/**/*.fai
+!data/**/*.dict
+!data/**/*.sh
+!data/**/README.md
+
