@@ -1,0 +1,10 @@
+data/
+KnownSites_Pf3D7_AllChr_v3_PASS_only.pf7.*
+*.bam
+*.bai
+*.fastq.gz
+*.tbi
+work/
+results/
+.nextflow*
+
